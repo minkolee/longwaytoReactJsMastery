@@ -1,23 +1,41 @@
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
-import AccountBalanceWalletRoundedIcon from '@mui/icons-material/AccountBalanceWalletRounded';
-import AccountBalanceWalletTwoToneIcon from '@mui/icons-material/AccountBalanceWalletTwoTone';
-import AccountBalanceWalletSharpIcon from '@mui/icons-material/AccountBalanceWalletSharp';
+import {Box, Button, Container, CssBaseline, TextField, Typography} from "@mui/material";
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 const styleBottom = {"verticalAlign": "bottom"};
 
 function App() {
-  return (
-    <div>
-      <ul>
-        <li >Filled: <AccountBalanceWalletIcon  color="primary" fontSize="small" style={styleBottom}/></li>
-        <li>Outlined: <AccountBalanceWalletOutlinedIcon color="secondary" style={styleBottom}/></li>
-        <li>Rounded: <AccountBalanceWalletRoundedIcon color="success" fontSize="large" style={styleBottom}/></li>
-        <li>TwoTone: <AccountBalanceWalletTwoToneIcon color="action" style={styleBottom}/></li>
-        <li>Sharp: <AccountBalanceWalletSharpIcon color="disabled" sx={{fontSize:40}} style={styleBottom}/></li>
-      </ul>
-   </div>
-  );
+    return (
+        <Container maxWidth="xs">
+            <CssBaseline>
+<Box sx={{display: "flex", flexDirection: "column", height: "100vh", justifyContent: "center"}}>
+    <Typography align="center">
+        <AccountCircleOutlinedIcon color="primary" fontSize="large"/>
+    </Typography>
+    <Typography align="center" variant="h6">请登录</Typography>
+    <Box sx={{textAlign: "center"}}>
+        <TextField fullWidth
+                   id="outlined-password-input"
+                   label="Username"
+                   type="text"
+                   autoComplete="current-password"
+        />
+    </Box>
+    <Box sx={{textAlign: "center", marginTop: "16px"}}>
+        <TextField fullWidth
+                   id="outlined-password-input"
+                   label="Password"
+                   type="password"
+                   autoComplete="current-password"
+        />
+    </Box>
+
+    <Box sx={{textAlign: "center", marginTop: "16px"}}>
+        <Button fullWidth variant="contained">Login</Button>
+    </Box>
+</Box>
+            </CssBaseline>
+        </Container>
+    );
 }
 
 export default App;
