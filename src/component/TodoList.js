@@ -5,9 +5,6 @@ class TodoList extends Component {
     render() {
         const {todos, toggleTodo} = this.props;
 
-        console.log(todos);
-        console.log(toggleTodo);
-
         return (
             <ul>
                 {todos.map(todo=>{
