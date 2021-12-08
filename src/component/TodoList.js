@@ -10,7 +10,7 @@ class TodoList extends Component {
 
     render() {
         const {todos, toggleTodo} = this.props;
-
+        console.log(todos);
         return (
             <ul>
                 {todos.map(todo=>{

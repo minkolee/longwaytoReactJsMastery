@@ -5,7 +5,7 @@ import {combineReducers} from "redux";
 
 
 export default combineReducers({
-    mytodo:todos,
+    todos,
     text,
     filter,
 })
