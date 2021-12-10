@@ -7,10 +7,8 @@ import {Provider} from "react-redux";
 import rootReducer from "./reducers/rootReducer";
 import thunkMiddleare from "redux-thunk";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers(
-    applyMiddleware(thunkMiddleare)
-));
+const store = createStore(rootReducer, compose(
+    applyMiddleware(thunkMiddleare))) ;
 
 
 ReactDOM.render(

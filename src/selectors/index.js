@@ -6,10 +6,6 @@ export const getVisibleTodos = (state) => {
 
     const {todos, filter} = state;
 
-    console.log(todos);
-    console.log(filter);
-
-
     switch (filter) {
         case 'all':
             return todos.data;
